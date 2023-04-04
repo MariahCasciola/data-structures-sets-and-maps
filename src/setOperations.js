@@ -24,7 +24,12 @@ function intersect(s1, s2) {
  * return the difference of two sets
  */
 function difference(s1, s2) {
-    
+  // Write a function that accepts two Sets and returns the difference between the Sets.
+  const difference = new Set(s1);
+  for (let element of s2) {
+    difference.delete(element);
+  }
+  return difference;
 }
 
 module.exports = { union, intersect, difference };
